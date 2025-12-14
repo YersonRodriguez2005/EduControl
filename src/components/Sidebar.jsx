@@ -11,10 +11,14 @@ import {
 export default function Sidebar({ activeSection, onSectionChange }) {
   return (
     <aside className="h-screen w-64 bg-white dark:bg-gray-900 border-r border-gray-200 dark:border-gray-700 p-6 fixed">
-      
+
       {/* Logo */}
-      <div className="text-3xl font-extrabold text-gray-900 dark:text-white mb-10">
-        StudyTrack
+      <div className="flex justify-center mb-12">
+        <img
+          src="/Logo.png"
+          alt="StudyTrack Logo"
+          className="w-25 h-25 rounded-2xl shadow-lg"
+        />
       </div>
 
       {/* Navegación */}
