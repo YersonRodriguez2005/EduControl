@@ -1,5 +1,4 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 import Sidebar from "./components/Sidebar";
 import DashboardHeader from "./components/Header";
 import DashboardOverview from "./components/DashboardOverview";
@@ -12,11 +11,10 @@ import UserProfile from "./components/UserProfile";
 import Notifications from "./components/Notifications";
 
 function App() {
-  const [activeSection, setActiveSection] = useState("dashboard");
+  const [activeSection, setActiveSection] = useState("overview");
 
   return (
     <div className="flex">
-
       <Sidebar
         activeSection={activeSection}
         onSectionChange={setActiveSection}
@@ -28,7 +26,6 @@ function App() {
         {activeSection === "notifications" && <Notifications />}
         {activeSection === "profile" && <UserProfile />}
 
-        {/* Render dinámico */}
         {activeSection === "overview" && <DashboardOverview />}
 
         {activeSection === "courses" && (
@@ -58,11 +55,8 @@ function App() {
         )}
 
         {activeSection === "tasks" && <TaskManager />}
-
         {activeSection === "calendar" && <TaskCalendar />}
-
         {activeSection === "progress" && <ProgressOverview />}
-
         {activeSection === "settings" && <UserSettings />}
       </main>
     </div>
